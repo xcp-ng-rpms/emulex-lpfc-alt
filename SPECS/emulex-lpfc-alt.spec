@@ -19,7 +19,7 @@
 %endif
 
 Summary: %{vendor_name} %{driver_name} device drivers
-Name: %{vendor_label}-%{driver_name}
+Name: %{vendor_label}-%{driver_name}-alt
 Version: 14.4.393.31
 Release: %{?xsrel}.1%{?dist}
 License: GPL
@@ -71,6 +71,7 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 %changelog
 * Thu Mar 05 2026 Andrei Semenov <andrei.semenov@vates.tech> - 14.4.393.31-1.1
 - Add BuildRequires gcc
+- Add alt suffix to the file name
 
 * Fri May 02 2025 Ross Lagerwall <ross.lagerwall@citrix.com> - 14.4.393.31-1
 - CA-410184: Update to 14.4.393.31
