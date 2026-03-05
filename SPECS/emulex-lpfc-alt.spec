@@ -8,7 +8,7 @@
 %define driver_name lpfc
 
 %if %undefined module_dir
-%define module_dir updates
+%define module_dir override
 %endif
 
 ## kernel_version will be set during build because then kernel-devel
@@ -38,7 +38,7 @@ Requires(postun): /usr/sbin/depmod
 version %{kernel_version}.
 
 %prep
-%autosetup -p1 -n %{name}-%{version}
+%autosetup -p1 -n emulex-lpfc-%{version}
 %{?_cov_prepare}
 
 %build
@@ -70,8 +70,7 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 
 %changelog
 * Thu Mar 05 2026 Andrei Semenov <andrei.semenov@vates.tech> - 14.4.393.31-1.1
-- Add BuildRequires gcc
-- Add alt suffix to the file name
+- Add modifications in order to build an alternative driver
 
 * Fri May 02 2025 Ross Lagerwall <ross.lagerwall@citrix.com> - 14.4.393.31-1
 - CA-410184: Update to 14.4.393.31
