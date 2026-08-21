@@ -21,7 +21,10 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{vendor_label}-%{driver_name}-alt
 Version: 14.4.393.31
-Release: %{?xsrel}.1%{?dist}
+Release: %{?xsrel}.2%{?dist}
+# Built against new kABI after cip rebase
+Requires: xcpng-kernel-kabi = 4.19.325-cip134+
+
 License: GPL
 Source0: emulex-lpfc-14.4.393.31.tar.gz
 
