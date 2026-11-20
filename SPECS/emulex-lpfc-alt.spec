@@ -21,7 +21,7 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{vendor_label}-%{driver_name}-alt
 Version: 14.4.393.31
-Release: %{?xsrel}.1.0.kernelpreview.1%{?dist}
+Release: %{?xsrel}.1.0.kernelpreview.1.0.testv0.1%{?dist}
 License: GPL
 Source0: emulex-lpfc-14.4.393.31.tar.gz
 
